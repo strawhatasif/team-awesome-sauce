@@ -1,0 +1,131 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+      <meta charset="UTF-8">
+      <title>jQuery rocks!!!</title>
+      
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+        
+        <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $("body").append("<p>Page loaded - $document.ready function</p>");
+            $("p.a").css("border", "3px solid red");
+            $("p:contains('$')").hide();
+            
+            var newP = $("<p>");
+            newP.append("<em>Created this content using the append function.</em>");
+            
+            $("#example").html(newP);
+            
+            $("#prepend").prepend("I Was Created Using Prepend / ");
+            
+            $("#justHTML").html("<h2>This is a brand new H2</h2>");
+            
+            $("#justText").text("<p>This is some new text</p>. Notice, HTML markup is ignored!");
+            
+              $(document).mousemove(function(e) {
+            pointer = $('<img>').attr({'src':'images/mouse.png'}).height(75).width(75);
+   
+                  $(document.body).append(pointer);
+                    pointer.css({
+                        'position':'absolute',
+                        top: e.pageY +2 , //offsets
+                        left: e.pageX +2   //offsets
+                        }).animate({ opacity: 0 }, 1500, function(){ $(this).remove(); });;
+            });
+            
+            
+            $("#go").click(function()
+                           {
+                $("#testDiv").animate({width: 400}, 300)
+                .animate({height: 300}, 400)
+                .animate({left: 200}, 500)
+                .animate({top: "+=100", borderWidth: 10}, "slow")});
+            
+            $("#getcontent").click(getContent);
+            $("#loadHTML").click(loadHTML);
+        
+
+        });
+        
+        function showBClass ()
+        {
+            $(".b").show();
+            $("#showMoney").hide();
+        };
+            
+        function getContent ()
+        {
+            $.ajax("sampletextcontent.txt",
+                   { success: setContent, type: "GET", dataType: "text"});
+        };
+            
+        function setContent (data, status, jqxhr)
+        {
+            $("#ajaxDiv").text(data);
+        };
+            
+        function loadHTML ()
+        {
+            $("#ajaxDiv").load("samplehtml.html");
+        };
+        
+        </script>
+        
+        <style>
+        #testDiv 
+        {
+            position: relative;
+            width: 150px;
+            height: 100px;
+            margin: 10px;
+            padding: 20px;
+            background: #cccfff;
+            border: 1px solid black;
+            font-size: 16pt;
+            cursor: pointer;
+        }
+            
+        #ajaxDiv 
+        {
+            position: relative;
+            width: 650px;
+            height: 250px;
+            margin: 10px;
+            padding: 20px;
+            background: #ccc000;
+            border: 1px solid black;
+            font-size: 16pt;
+        }
+            
+        </style>
+    </head>
+    <body>
+        
+        <h3>Hello!!!</h3>
+        
+        <p class="a">A red border shows around this with jQuery.</p>
+        <p class="b" id="money">$$$$$$$$$$</p>
+        <a href="javascript:void(0)" onclick="showBClass()" id="showMoney">Show me the money!!!</a>
+        
+        <div id="example"></div>
+        
+        <div id="justHTML"></div>
+        
+        <p id="justText"></p>
+        
+        <h4 id="prepend">Existing Content (not created using JQuery)</h4>
+        
+        <button id="go">Demonstrate Animation!</button>
+        
+        <div id="testDiv"></div>
+        
+        <button id="getcontent">Get Text!</button>&nbsp;
+        <button id="loadHTML">Load HTML!</button>
+        
+        <div id="ajaxDiv"></div>
+
+    </body>
+    </html>

@@ -12,9 +12,9 @@
 
     <body>
         
-<div class="container mainColor">
+
     <header>
-    <nav class="navbar-inverse navbar-default " role="navigation">
+    <nav class="navbar-inverse navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-
@@ -24,7 +24,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-            <img src="images/logo.png" alt="Team Awesome Sauce! Logo">
+        <a href="#featured">   
+            <img class="logo" src="images/logo.png" alt="Team Awesome Sauce! Logo">
+        </a> 
       </div><!-- navbar-header -->
     <div class="collapse navbar-collapse" id="collapse">
         <ul class="nav navbar-nav navbar-right">
@@ -32,40 +34,43 @@
           <li><a href="#about">About</a></li>
           <li><a href="#topics">Topics</a></li>
           <li><a href="#staff">Staff</a></li>
-          <li><a href="#contactus">Contact Us</a></li>
+          <li><a href="#contactme">Contact Us</a></li>
         </ul>        
       </div><!-- collapse navbar-collapse -->
     </div><!-- container -->
   </nav>
+        
+       
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-<ol class="carousel-indicators">
-</ol>
-<div class="carousel-inner fullheight">
-    <div class="item active">
-    <img src="images/awesome-sauce1.jpg" alt="You're a jar of awesome">
-    </div>
-    <div class="item">
-    <img src="images/awesomeSauce_vader.jpg" alt="Darth Vader - Awesome Sauce" style="height: 480px">
-    </div>
-    <div class="item">
-    <img src="images/awesomesauceBottle.jpg" alt="Awesome Sauce Bottle">    
-    </div>
-    <div class="item">
-    <img src="images/awesomesaucedisplay.jpg" alt="Awesome Sauce Cursive">  
-    </div>
-     <div class="item">
-    <img src="images/sriracha-awesome-sauce.jpg" alt="Sriracha T-Shirt - Awesome Sauce" style="height: 480px">    
-    </div>
- </div>
-    
-<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-<span class="glyphicon glyphicon-chevron-left"></span> 
-</a>
-<a class="right carousel-control" href="#myCarousel" data-slide="next">
-<span class="glyphicon glyphicon-chevron-right"></span> 
-</a>
-    
+<div class="container mainColor">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+        </ol>
+        <div class="carousel-inner fullheight">
+            <div class="item active">
+                <img src="images/awesome-sauce1.jpg" alt="You're a jar of awesome">
+            </div>
+            <div class="item vader">
+                <img src="images/awesomeSauce_vader.jpg" alt="Darth Vader - Awesome Sauce">
+            </div>
+            <div class="item">
+                <img src="images/awesomesauceBottle.jpg" alt="Awesome Sauce Bottle">    
+            </div>
+            <div class="item">
+                <img src="images/awesomesaucedisplay.jpg" alt="Awesome Sauce Cursive">  
+            </div>
+            <div class="item vader">
+                <img src="images/sriracha-awesome-sauce.jpg" alt="Sriracha T-Shirt - Awesome Sauce">    
+            </div>
+         </div>
+
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span> 
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span> 
+        </a>
+    </div> 
 </div> 
 
 
@@ -76,71 +81,107 @@
 
 
     <div id="main">
-    <h3>What's going on?</h3>
-    <p>
-        So you randomly stumbled upon this page...you're probably wondering - what's with this site? 
-        Well...if you must know...my first name is Asif...and it's pronounced "Ah sif" so, on most days, 
-        my unofficial nickname is "Awesome"! ;-) That's what partly led to "Team Awesome Sauce", which is 
-        a team name I came up with my Personal Trainer while completing a physical training challenge 
-        at my gym.
-    </p>
+        <div class="content container mainColor">
+            <h3>What's going on?</h3>
+            
+            <div class="row">
+                 <p class="col-sm-10">
+                    So you randomly stumbled upon this page...you're probably wondering - what's with this 
+                     site? 
+                    Well...if you must know...my first name is Asif...and it's pronounced "Ah sif" so, on 
+                     most days, my unofficial nickname is "Awesome"! ;-) That's what partly led to "Team 
+                     Awesome Sauce", which is a team name I came up with my Personal Trainer while 
+                     completing a physical training challenge at my gym.
+                </p>
+            </div>
+        </div>
+   
     </div>
 
+    <!-- BOOTSTRAP requires the grids to add up to 12. it's a 12 grid system! -->
+    <!-- sm = tablet, xs = mobile, etc. -->
     <div id="about">
-    <h3>About</h3>
-    <p>
-        I recently discovered an easier way to develop webpages and I'm currently modernizing my knowledge 
-        regarding web development. 
-       
-        This site is built using the Twitter Bootstrap framework. Any feedback you have about the site,    
-        Boostrap, web development, or any topic, would be much appreciated!      
-    </p>
-    <p>
-    
-    <em>I was sold on Bootstrap by some co-workers and so far I've found it's AWESOME because it 
-        eliminates all the hair-pulling nights I spent, and frustration I experienced, in 
-        High School and college trying to figure out padding, positioning, and cross-browser CSS markup.
-    </em>
-    </p>
-        
+        <div class="content container mainColor">
+            <h3>About</h3>
+         
+            <div class="row">
+                <p class="col-sm-6">
+                    I recently discovered an easier way to develop webpages and I'm currently modernizing 
+                    my knowledge regarding web development. 
+
+                    This site is built using the Twitter Bootstrap framework. Any feedback you have about 
+                    the site, Boostrap, web development, or any topic, would be much appreciated!      
+                </p>
+                <p class="col-sm-6">
+
+                <em>I was sold on Bootstrap by some co-workers and so far I've found it's AWESOME because 
+                    it eliminates all the hair-pulling nights I spent, and frustration I experienced, in 
+                    High School and college trying to figure out padding, positioning, and cross-browser 
+                    CSS markup.
+                </em>
+                </p>
+            </div> 
+        </div>
     </div>
 
 
 
     <div id="topics">
-    <h3>Topics</h3>
-    <span>I plan to learn: </span>
-    <ul>
-        <li>Bootstrap</li>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JQuery</li>
-        <li>Node.js</li>
-        <li>Heroku or AWS</li>
-        <li>Git</li>
-    </ul>
+        <div class="content container mainColor">
+        
+        <h3>Topics</h3>   
+        <div class="row">
+            <div class="content container mainColor">
+                <span class="col-sm-2">I plan to learn: </span>
+            
+                <div class="col-sm-10">
+                    <ul>
+                        <li>Bootstrap</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JQuery</li>
+                        <li>Angular JS</li>
+                        <li>Node.js</li>
+                        <li>Heroku or AWS (Cloud Computing)</li>
+                        <li>Git & Github</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    </a>
+  </div>
 
     <div id="staff">
-    <h3>Staff</h3>
-    <span>Developer: Asif Fasih
+        <div class="content container mainColor">
+            <h3>Staff</h3>
+        
+            <div class="row">
+                <span>Developer: Asif Fasih</span>
+            </div>
+        </div>
     </div>
 
-    <div id="contactus">
-    <h3>Contact Me</h3>
-    <ul>
-        <li>Send me an e-mail - aafasih@gmail.com</li>
-    </ul>
+    <div id="contactme" class="page row">
+        <div class="content container mainColor">
+           <h3>Contact Me</h3>
+     
 
+        <div class="row">
+             <p>
+                Feel free to send me an e-mail: <a href="mailto:aafasih@gmail.com">aafasih@gmail.com</a>
+            </p>
+        </div>
     </div>
-    <footer>
-    <nav>
-    It's just for fun so relax...
-     </nav>
-    </footer>
-    
     </div>
+
+    <div class="container mainColor">
+         <footer>
+            <nav>
+            It's just for fun so relax...
+            </nav>
+        </footer>
+    </div>
+
   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
